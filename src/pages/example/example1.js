@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 const Example1 = () => {
 	return (
 		<React.Fragment>
-			<h1>Example 1</h1>
+			<h1>Example 1(Child Route Practice)</h1>
 			<Outlet />
 		</React.Fragment>
 	);

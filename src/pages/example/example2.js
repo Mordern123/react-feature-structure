@@ -3,7 +3,7 @@ import * as React from "react";
 import { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { setLogin, setLogout } from "../../reducers/exampleSlice";
+import { setLogin, setLogout } from "../../reducers/example/exampleSlice";
 
 const Example2 = () => {
   const state = useSelector((state) => state.example);
@@ -12,20 +12,20 @@ const Example2 = () => {
   const usernameRef = useRef();
   const ageRef = useRef();
   const emailRef = useRef();
-  
+
   const handleLogin = () => {
-	const usernameValue = usernameRef.current.value;
-	const ageValue = ageRef.current.value;
-	const emailValue = emailRef.current.value;
-	dispatch(setLogin({
-		username: usernameValue,
-		age: ageValue,
-		email: emailValue,
-	}));
+    const usernameValue = usernameRef.current.value;
+    const ageValue = ageRef.current.value;
+    const emailValue = emailRef.current.value;
+    dispatch(setLogin({
+      username: usernameValue,
+      age: ageValue,
+      email: emailValue,
+    }));
   };
 
   const handleLogout = () => {
-	dispatch(setLogout());
+    dispatch(setLogout());
   };
 
   return (
@@ -37,15 +37,15 @@ const Example2 = () => {
             <h2>UserInfo</h2>
             <form>
               <div className="user-box">
-                <input type="text" name="" required="" defaultValue={state.profile.username}/>
+                <input type="text" name="" required="" defaultValue={state.profile.username} />
                 <label>Username</label>
               </div>
               <div className="user-box">
-                <input type="text" name="" required="" defaultValue={state.profile.age}/>
+                <input type="text" name="" required="" defaultValue={state.profile.age} />
                 <label>Age</label>
               </div>
               <div className="user-box">
-                <input type="password" name="" required="" defaultValue={state.profile.email}/>
+                <input type="password" name="" required="" defaultValue={state.profile.email} />
                 <label>Email</label>
               </div>
               <a onClick={handleLogout}>
@@ -63,15 +63,15 @@ const Example2 = () => {
           <h2>Login</h2>
           <form>
             <div className="user-box">
-              <input type="text" name="" required="" ref={usernameRef}/>
+              <input type="text" name="" required="" ref={usernameRef} />
               <label>Username</label>
             </div>
             <div className="user-box">
-              <input type="text" name="" required="" ref={ageRef}/>
+              <input type="text" name="" required="" ref={ageRef} />
               <label>Age</label>
             </div>
             <div className="user-box">
-              <input type="password" name="" required="" ref={emailRef}/>
+              <input type="password" name="" required="" ref={emailRef} />
               <label>Email</label>
             </div>
             <a onClick={handleLogin}>

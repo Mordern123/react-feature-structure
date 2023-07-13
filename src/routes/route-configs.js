@@ -1,4 +1,5 @@
 import exampleRoutes from "./example-routes";
+import apiExampleRoutes from "./api-example-routes";
 
 const routeConfigs = [
 	{
@@ -6,6 +7,11 @@ const routeConfigs = [
 		title: "Example",
 		routes: exampleRoutes,
 	},
+	{
+		name: "apiExample",
+		title: "apiExample",
+		routes: apiExampleRoutes,
+	}
 ];
 
 export default routeConfigs;

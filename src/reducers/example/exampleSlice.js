@@ -23,7 +23,7 @@ const exampleSlice = createSlice({
             };
         },
         setLogout: (state) => {
-            state = initialState;
+            state.profile = {...initialState};
         }
     }
 })

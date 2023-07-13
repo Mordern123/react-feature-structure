@@ -4,11 +4,11 @@ import routeConfigs from "./route-configs";
 
 const AppRoutes = () => {
     const pages = routeConfigs.flatMap((i) => i.routes);
-
+    console.log(pages)
     const routes = useRoutes([
         {
             path: "/",
-            element: <Home />
+            element: <Home />,
         },
         ...pages,
     ]);
